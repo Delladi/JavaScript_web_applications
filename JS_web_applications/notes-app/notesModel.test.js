@@ -1,8 +1,10 @@
 const NotesModel = require('./notesModel');
 
 
-it('should create a new NotesModel', () => {
-    const model = new NotesModel();
+describe('Notes model class', () => {
+    it('starts with no notes', () => {
+       const notes = new NotesModel();
+ 
     expect(model.getNotes()).toEqual([]);
   });
   
@@ -26,3 +28,4 @@ it('should reset the notes in the NotesModel', () => {
     const notes = model.getNotes();
     expect(notes).toEqual([]);
   });
+});
