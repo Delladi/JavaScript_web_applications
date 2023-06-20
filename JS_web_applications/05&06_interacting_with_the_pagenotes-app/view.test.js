@@ -26,4 +26,15 @@ describe('Page view', () => {
     expect(document.querySelectorAll('p').length).toBe(3);
 
   });
+
+  it("clears all paragraphs in the document", () => {
+    // Arrange
+    document.body.innerHTML = fs.readFileSync("./index.html");
+    const view = new View();
+    // Act
+    view.clearParagraph();
+    // Assert
+    expect(document.querySelectorAll("p").length).toBe(0);
+  });
+  
 });

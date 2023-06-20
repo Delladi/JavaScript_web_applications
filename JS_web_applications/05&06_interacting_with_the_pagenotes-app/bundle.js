@@ -16,6 +16,12 @@
           newParagraph.innerText = "I was created dynamically by JavaScript";
           this.mainContainerEl.append(newParagraph);
         }
+        clearParagraph() {
+          const allParagraphs = document.querySelectorAll("p");
+          allParagraphs.forEach((paragraph) => {
+            paragraph.remove();
+          });
+        }
       };
       module.exports = View2;
     }
@@ -26,6 +32,5 @@
   var view = new View();
   view.addParagraph();
   view.addParagraph();
-  view.addParagraph();
-  view.addParagraph();
+  view.clearParagraph();
 })();
