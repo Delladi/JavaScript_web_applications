@@ -4,6 +4,11 @@ class View {
 
     console.log(this.mainContainerEl);
   }
+  addParagraph() {
+    const newParagraph = document.createElement('p');
+    newParagraph.innerText = 'I was created dynamically by JavaScript';
+    this.mainContainerEl.append(newParagraph)
+  }
 }
 
 module.exports = View;
