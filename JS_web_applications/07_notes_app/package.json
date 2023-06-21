@@ -1,0 +1,20 @@
+{
+  "name": "07_notes_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "notesView.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild index.js --bundle  --outfile=bundle.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "jsdom": "^22.1.0"
+  },
+  "dependencies": {
+    "jest-environment-jsdom": "^29.5.0"
+  }
+}
