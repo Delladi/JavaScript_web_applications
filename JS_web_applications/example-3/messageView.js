@@ -12,11 +12,14 @@ class MessageView {
   }
 
   displayMessage() {
-    console.log('Thanks for clicking me!');
+    //console.log('Thanks for clicking me!');
+    const message = document.querySelector('#message-input').value;
+
     const messageElement = document.createElement('div');
     messageElement.id = 'message';
-    messageElement.innerText = 'This is a message.';
+    messageElement.innerText = message;
 
+    //document.querySelector('#message-input').value = '';
     document.querySelector('#main-container').append(messageElement);
   }
 
