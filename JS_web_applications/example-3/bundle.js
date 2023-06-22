@@ -22,6 +22,7 @@
           const messageElement = document.createElement("div");
           messageElement.id = "message";
           messageElement.innerText = message;
+          document.querySelector("#message-input").value = "";
           document.querySelector("#main-container").append(messageElement);
         }
         hideMessage() {

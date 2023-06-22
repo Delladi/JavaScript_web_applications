@@ -16,6 +16,7 @@ describe('MessageView', () => {
     buttonEl.click();
     //assert
     expect(document.querySelector('#message')).not.toBeNull();
+    //expect(document.querySelector('#message').innerText).toEqual('This is a test message');
   });
 
   it('Hides the message', () => {
@@ -28,13 +29,12 @@ describe('MessageView', () => {
     const inputEl = document.querySelector('#message-input');
     
     inputEl.value = 'This is a test message';
-    
+
     buttonEl.click();
     const hideButtonEl = document.querySelector('#hide-message-button');
     hideButtonEl.click();
     //assert: that the msg element is not on the page
-    expect(document.querySelector('#message')).not.toBeNull();
+    expect(document.querySelector('#message')).toBeNull();
 
-    expect(document.querySelector('#message').innerText).toEqual('This is a test message');
   });
 });
